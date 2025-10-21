@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
 
     public void GoToSettingsMenu()
     {
+        print("load settings");
         SceneManager.LoadScene("ControlsScreen");
     }
 
