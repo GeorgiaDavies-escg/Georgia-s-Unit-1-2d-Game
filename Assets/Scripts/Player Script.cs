@@ -1,8 +1,12 @@
+using System;
 using UnityEditor;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+
+    public static event Action BurgerPickedUp = delegate { };
+
     Rigidbody2D rb;
     public GameObject weapon;
     public LayerMask groundLayer;
@@ -23,12 +27,14 @@ public class PlayerScript : MonoBehaviour
 
         xvel = rb.linearVelocity.x;
         yvel = rb.linearVelocity.y;
+        anim.SetBool("isRunning", false);
 
         if (Input.GetKey("a"))                  //Increases velocity to move Left
         {
             if(Input.GetKey(KeyCode.LeftControl))
             {
                 xvel = -6;
+                anim.SetBool("isRunning", true);
             }
             else
             {
@@ -41,6 +47,7 @@ public class PlayerScript : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftControl))
             {
                 xvel = 6;
+                anim.SetBool("isRunning", true);
             }
             else
             {
@@ -48,11 +55,12 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
+
         if (((Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown("w")))))     //Increases velocity to move upward (Jump) if sprite is touching a box collider
         {
             if (isGrounded)
             {
-                yvel = 5;
+                yvel = 8;
             }
         }
 
@@ -117,6 +125,14 @@ public class PlayerScript : MonoBehaviour
         return hit.collider;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag.Equals("Consumable"))
+        {
+            BurgerPickedUp();
+            Destroy(collision.gameObject);
+        }
+    }
 
     void Shoot()
     {

@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -87,10 +87,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -158,11 +158,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 15
-        width: 37
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 16
+        width: 36
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -179,12 +179,12 @@ TextureImporter:
       name: Bakushin_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 37
         y: 0
-        width: 44
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 42
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,12 +201,12 @@ TextureImporter:
       name: Bakushin_2
       rect:
         serializedVersion: 2
-        x: 98
+        x: 99
         y: 0
-        width: 44
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 42
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: Bakushin_3
       rect:
         serializedVersion: 2
-        x: 161
+        x: 162
         y: 0
-        width: 47
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 45
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: Bakushin_4
       rect:
         serializedVersion: 2
-        x: 226
+        x: 227
         y: 0
-        width: 45
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 43
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -267,12 +267,12 @@ TextureImporter:
       name: Bakushin_5
       rect:
         serializedVersion: 2
-        x: 97
+        x: 98
         y: 0
-        width: 25
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 23
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -289,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bac702ba5517003439b8ba0bdc1f7cbf
     internalID: 0
     vertices: []
     indices: 
@@ -297,7 +297,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Bakushin_0: 7063866416701872937
       Bakushin_1: 3255533006775521079
