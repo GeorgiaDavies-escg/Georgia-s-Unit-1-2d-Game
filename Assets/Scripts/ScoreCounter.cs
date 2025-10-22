@@ -10,7 +10,7 @@ public class ScoreCounter : MonoBehaviour
 
     private void Awake()
     {
-        PlayerScript.BurgerPickedUp += RunCo;
+        PlayerScript.BurgerPickedUp += RunCo1;
         scoreCounterText = GetComponent<TextMeshProUGUI>();
     }
         
@@ -42,13 +42,13 @@ public class ScoreCounter : MonoBehaviour
 
     }
 
-    public void RunCo()
+    public void RunCo1()
     {
         StartCoroutine(Pulse());
     }
 
     private void OnDestroy()
     {
-        PlayerScript.BurgerPickedUp -= RunCo;
+        PlayerScript.BurgerPickedUp -= RunCo1;
     }
 }

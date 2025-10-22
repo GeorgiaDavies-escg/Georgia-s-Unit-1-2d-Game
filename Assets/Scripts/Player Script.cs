@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
 
     public static event Action BurgerPickedUp = delegate { };
+    public static event Action CarrotPickedUp = delegate { };
 
     Rigidbody2D rb;
     public GameObject weapon;
@@ -95,7 +96,7 @@ public class PlayerScript : MonoBehaviour
             rb.linearVelocity = new Vector2(xvel, yvel);  //Tells the rigid body to move based on given velocity
 
         GroundCheck();
-        Shoot();
+        // Shoot();
     }
 
     void GroundCheck()
@@ -134,7 +135,7 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    void Shoot()
+    /* void Shoot()
     {
         if (Input.GetKeyDown("r"))
         {
@@ -147,7 +148,10 @@ public class PlayerScript : MonoBehaviour
 
             rb.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z + 1);
         }
+    }
+     */
 
-    } //Shoot a projectile
+
+    //Shoot a projectile
 
 }
