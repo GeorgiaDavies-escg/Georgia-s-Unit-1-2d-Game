@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     public Animator anim;
     bool isGrounded;
     HelperScript helper;
+    public Transform respawnPoint;
 
     void Start()
     {
@@ -133,7 +134,14 @@ public class PlayerScript : MonoBehaviour
             BurgerPickedUp();
             Destroy(collision.gameObject);
         }
+
+        if (collision.tag.Equals("Projectile"))
+        {
+            transform.position = respawnPoint.position;
+            Destroy(collision.gameObject);
+        }
     }
+
 
     /* void Shoot()
     {

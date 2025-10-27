@@ -19,7 +19,16 @@ public class ShootingEnemy : MonoBehaviour
     {
         if(timeBtwShots <= 0)
         {
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            GameObject clone;
+
+            clone = Instantiate(projectile, transform.position, transform.rotation);
+
+            Rigidbody2D rb = clone.GetComponent<Rigidbody2D>();
+
+            rb.linearVelocity = -transform.right * 15;
+
+            rb.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z + 1);
+
             timeBtwShots = startTimeBtwShots;
         }
         else
