@@ -15,7 +15,7 @@ public class EnemyRaycast : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         helper = gameObject.AddComponent<HelperScript>();
 
-        vel.x = -5;
+        vel.x = 5;
 
     }
 
@@ -23,18 +23,18 @@ public class EnemyRaycast : MonoBehaviour
     void Update()
     {
 
-        if (vel.x > 2f)
+        if (vel.x > 3f)
         {
             helper.DoFlipObject(false);
 
-            if (ExtendedRayCollisionCheck(0, 0.3f) == false)
+            if (ExtendedRayCollisionCheck(0.3f, 0) == false)
             {
                 vel.x = -5;
             }
         }
         else
         {
-            if (vel.x < 2f)
+            if (vel.x < 3f)
             {
                 helper.DoFlipObject(true);
 
@@ -55,7 +55,7 @@ public class EnemyRaycast : MonoBehaviour
         bool hitSomething = false;
 
         // convert x and y offset into a Vector3 
-        Vector3 offset = new Vector3(xoffs, yoffs, 0);
+        Vector3 offset = new Vector3(xoffs - 1 , yoffs, 0);
 
         //cast a ray downward 
         RaycastHit2D hit;
@@ -73,7 +73,7 @@ public class EnemyRaycast : MonoBehaviour
         }
         // draw a debug ray to show ray position
         // You need to enable gizmos in the editor to see these
-        Debug.DrawRay(transform.position + offset, -Vector3.up * rayLength, hitColor);
+        Debug.DrawRay(transform.position + offset, -Vector2.up * rayLength, hitColor);
 
         return hitSomething;
 

@@ -6,7 +6,7 @@ public class ScoreCounter : MonoBehaviour
 {
 
     private TextMeshProUGUI scoreCounterText;
-    public int scoreValue;
+    public static int scoreValue;
 
     private void Awake()
     {
